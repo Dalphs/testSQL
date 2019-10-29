@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  each t, i in type
+    +request(t, url[i])
+
+  mixin request(type, url)
+    include requestTemplate
